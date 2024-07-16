@@ -1,4 +1,3 @@
-from asyncio import constants
 import csv
 import numpy as np
 import matplotlib.pyplot as plt
@@ -40,12 +39,9 @@ def load_integral_data():
     df = pd.read_csv("data.csv")
     return np.array(df)
 
-
-#  normalization required because the mileage had different echels, it change between + 1k to 10k but prices are more stable
-#  so the mileage have to be normalize otherwise the result is inf or nan
-#  normalization min - max
-# data - min value / diff maxvalue  min value
 def normalization_data(data):
+    """"Normalized data  with Mikn-Max algorithmn 
+    because Its need to be on the same scale"""
     min_vals = np.min(data, axis=0)
     max_vals = np.max(data, axis=0)
     data_norm = (data - min_vals) / (max_vals - min_vals)
@@ -133,7 +129,6 @@ def write_to_csv(
 def show_cost(
     history_cost,
 ):
-    history_sorted = sorted(history_cost, key=lambda k: k["cost"])
     cost = [d["cost"] for d in history_cost]
     plt.plot(range(1, len(cost) + 1), cost)
     plt.title("Cost per iteration")
