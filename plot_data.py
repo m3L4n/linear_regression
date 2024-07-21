@@ -36,17 +36,16 @@ def score(predictions, prices):
 
 
 def plot_diff_stand(
-    mileages, prices, mileages_stand, prices_stand, t0, t1, t0_stand, t1_stand
+    mileages,
+    prices,
+    mileages_stand,
+    prices_stand,
+    predicted_stand,
+    predicted,
 ):
     """Plot on the same plot the prediction standardized and destandized
     its the same data but not on the same scale
     """
-    predicted_stand = [
-        LinearRegression._predict(t0_stand, t1_stand, mileage)
-        for mileage in mileages_stand
-    ]
-    predicted = [LinearRegression._predict(t0, t1, mileage) for mileage in mileages]
-    score(predicted, prices)
     plt.figure(figsize=(12, 6))
     plt.subplot(1, 2, 1)
     plt.plot(mileages, prices, "bo")
