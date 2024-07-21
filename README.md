@@ -1,6 +1,28 @@
 # Linear regression
+## How to use my linear 
+ you have to create a venv or install in global the requirements.txt
+ ``` 
+ python3 -m venv [path]
+ source [path]/bin/activate
+ pip install -r requirements.txt
+ ```
+### You have to train the model before predict
+```
+python ./training
+it will plot the cost , plot repartition of the data, plot the data on the different scale
+and print the  performance score of the model
+```
 
-### Linear regression is a statistic method use for modelisation between dependant variable and indepedant variable 
+### After training you can predit prices of vehicule with x mileage
+```
+python ./predict
+>[int mileage ]
+> its print the result of the prediction
+```
+
+
+##
+## Linear regression is a statistic method use for modelisation between dependant variable and indepedant variable 
 > In simple terms, it aims to establish a straight line that best fits the observed data points in a coordinate space.
 
 
@@ -40,3 +62,8 @@ There two of transformation of the data
 - (x- min_val) / ( max_val - min_val)
 - 
 Dont forget to  change the theta0 and theta1 if you use normalisation or standardization
+
+
+
+
+
