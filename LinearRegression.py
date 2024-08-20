@@ -26,7 +26,7 @@ class LinearRegression:
         cost = 0
         for i in range(m):
             cost += self.cost_predict(theta0, theta1, mileages[i], prices[i])
-        return (1 / (2 * m)) * cost
+        return (1 /  m) * cost
 
     def _compute_gradient(self, mileages, prices, theta0, theta1):
         """Compute gradient descent

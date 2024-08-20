@@ -1,6 +1,5 @@
 import matplotlib.pyplot as plt
 import numpy as np
-from LinearRegression import LinearRegression
 
 
 def plot_prediction(predictions, mileages, prices):
@@ -10,7 +9,7 @@ def plot_prediction(predictions, mileages, prices):
     plt.legend()
     plt.xlabel("X  mileage")
     plt.ylabel("Y  price")
-    # plt.show()
+    plt.show()
 
 
 def plot_repartiton(mileages, prices):
@@ -18,7 +17,7 @@ def plot_repartiton(mileages, prices):
     plt.plot(mileages, prices, "ro")
     plt.xlabel("X mileage")
     plt.ylabel("Y  price")
-    # plt.show()
+    plt.show()
 
 
 def score(predictions, prices):
@@ -61,4 +60,4 @@ def plot_diff_stand(
     plt.xlabel("X (standardized) mileage")
     plt.ylabel("Y (standardized) price")
 
-    # plt.show()
+    plt.show()

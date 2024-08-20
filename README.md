@@ -1,4 +1,6 @@
 # Linear regression
+
+
 ## How to use my linear 
  you have to create a venv or install in global the requirements.txt
  ``` 
